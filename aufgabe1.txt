@@ -1,0 +1,109 @@
+Daan Lockhorst, Daniel Schilke									19.04.2018
+
+
+					Erste Aufgabe Webprogrammierung
+
+Metadaten-Elemente
+- head
+	-Sammelt alle metadata für das Dokument
+- title
+	-Erstellt den Titel der Website
+- link
+	-Erstellt einen Hyperlinktext der zu einer Website führt
+- style
+	-Link zu einer CSS-Datei, welche der Website Aussehen gibt
+- script
+	-Link oder Einführung eines Javascriptes
+- base
+	-Spezifiziert den base URl für den relativen URL
+
+sectioning
+- html
+	-Anfang der HTML Sektion 
+- body
+	-Hauptinhalt einer Website
+- section
+	-Generische(Eigenschaft) einer Sektion von einer Anwendung oder einem Dokument
+- article
+	-Inhalt eines kleinen Elementes, welcher unterhalb einer Überschrift erscheint
+- nav
+	-Sektion welche zum Navigieren dient
+- aside
+	-Seperater Inhalt einer Website, welcher an der Seite erscheint. Passend für Werbung oder 		Nebeninformationen
+- header
+	-Definiert den Anfang einer Website, erscheint auf der Website oben
+- footer
+	-Definiert die Endsektion einer Website, erscheint auf der Website unten
+- h1 … h6
+	-Je kleiner das h, desto größer der Kopftext (Headertext)
+
+
+grouping
+- p
+	-Indikator eines Paragraphen
+- blockquote
+	-Größeres Zitat, mit Quelle (cite)
+- ol, ul, li, dl, dd, dt
+	-Verschiedene Arten von Listen
+- figure, fig caption
+	-Inhalte wie Diagramme, Bilder oder Illustriationen
+- form
+	-Formular welches der Benutzer der Website ausfüllen kann
+- table, tr, td, tbody,caption
+	-Table leitet die Tabelle ein, tr leitet neue Tabellenzeile ein, td ist der Tabelleninhalt, 
+	 tbody ist ein bestimmter Abteil (Gruppierung) der Tabelle, welcher Daten beinhaltet, caption ist 		 die Tabellenüberschrift
+- hr
+	-ein thematischer / inhaltlicher Absatz 
+- main
+	-dominanter Hauptabsatz der Website
+- div
+	-Trennungsmethode, erstellt Absatz
+
+
+textlevel
+- em, strong
+	-Element welches wichtig ist, und hervorgehoben werden kann
+- i,b,u,s
+	-i ist ein stilistische Möglichkeit abzugrenzen, u dient zur Auszeichnung von nicht korrektem Text, s dient ebenso zur Auszeichnung von nicht korrektem Text
+- a
+	-Hyperlinkelement
+- abbr
+	-Wird verwendet, um eine Abkürzung eines Wortes zu verwenden. Wenn man anschließend mit der Maus über das Wort geht, erscheint das abgekürzte Wort in voller Länge (zum Beispiel Abk. für Abkürzung)
+- cite
+	-Titel einer Arbeit 
+- q
+	-Kleines Zitat
+- sub, sup
+	-Superskriptelement , typografische Konventionen. Zum Beispiel : Bedeutet H2O mit sub geschrieben H (tiefergestellte 2, leicht unter H) O
+- code
+	-Möglichkeit des Einbetten eines Computer Codes (z.B. XML oder eines computer Programmes)
+- address
+	-Kontaktinformationen für das Element welches daneben liegt
+- br
+	-Umbrüche während des Textes
+- dfn
+	-Dient zur Definition eines Fließtextes, kann später zur Verwendung in CSS später verwendet werden
+- img
+	-Platz innerhalb der Website für ein Bild
+- span
+	-Möglichkeit des erstellen eines Absatzmöglichkeit einer Website
+
+
+Formulare
+- datalist
+	-Eingabefeld, welches Vorschläge enthält. z.B. ein Eingabefeld für verschiedene Browser (Firefox, 		 Chrome, Explorer) Sobald man F eingibt, wird einem Firefox schon vorgeschlagen 
+- fieldset
+	-Wird benutzt um zugehörige Elemente zu gruppieren
+- input
+	-Verschiedene Arten von Einganemöglichkeiten: z.B. Text = Textfeld, Submit = Button
+- label
+	-Erklärung / Ergänzung was der Inhalt eines Feldes bedeutet
+- legend
+	-"Überschrift" eines Formulares , wofür das Formular stehen soll
+- option, opt group
+	-Auswahlmöglichkeit durch Anklicken , Untermenü erscheint
+- select
+	-Möglichkeit durch anklicken eine Option auszuwählen, Untermenü erscheint
+- textarea
+	-Textfeld erscheint, welches unter Umständen schon einen Text beinhaltet
+
