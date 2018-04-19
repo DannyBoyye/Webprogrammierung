@@ -1,3 +1,4 @@
-### webProgrammierung sose18 Internationalen Medien Informatik ###
+## webProgrammierung ##
 
-## Daan Lockhrost & Daniel Schilke ##
+# Daan Lockhrost # 
+# Daniel Schilke #
