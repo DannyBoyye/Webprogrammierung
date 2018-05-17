@@ -3,17 +3,34 @@
     box-sizing: border-box;
 }
 header{
-    width: 75%;
+    width: 100%;
     float: center;
 
+}
+p{
+    width: 100%;
+    position: center;
+    text-align: center;
+}
+h2{
+    width: 100%;
+    background-color: lightcoral;
+}
+
+h3{
+    width: 100%;
+    position: right;
+    text-align: right;
+    background-color: lightcoral;
 }
 
 nav {
-    width: 75%;
+    width: 100%;
     float: center;
+    text-anchor: middle;
 }
 main {
-    width: 75%;
+    width: 100%;
     float: center;
 }
 img {
