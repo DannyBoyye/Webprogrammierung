@@ -3,67 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Our Foodblog</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
+<body>
+    <header>
+        <h1>Know what you eat</h1>
+        <h2>A foodblog with cool tools</h2>    
+    </header>
 
-<header>
-    <img src= "img/header.jpg"><img>
-    <h1>Know what you eat</h1>
-    <h2>A foodblog with cool tools</h2>    
-</header>
-
-<body background= "img/background.png" alt="Background">
-
-    <!-- mainMenu  -->
-    <ul>
+    <nav id="menu">
+        <ul>
             <li><a href="analyser.html">Food analyser</a></li>
             <li><a href="blog.html">Our foodblog</a></li>
             <li><a href="about.html">Who are we?</a></li>
-    </ul> 
+        </ul> 
+    </nav>
 
+    <form id= "contact">
+        <h3>Contact us</h3>   
             
-        <!-- contactForm  -->
-        <div id="contact">
-                <form id= "contact">
+        <label for="ToolsAndTips">ToolsAndTips</label>
+        <input type="radio" id="ToolsAndTips">
 
-                 <h3>Contact us</h3>   
-                    
-                <label for="ToolsAndTips">Male</label>
-                <input type="radio" id="ToolsAndTips"><br>
+        <label for="FoodAdvice">FoodAdvice</label>
+        <input type="radio" id="FoodAdvice">
 
-                <label for="FoodAdvice">Female</label>
-                <input type="radio" id="FoodAdvice"><br>
+        <label for="Other">Other</label>
+        <input type="radio"id="Other">
     
-                <label for="Other">Other</label>
-                <input type="radio"id="Other"><br>
-            
-                <label for="firstName">First Name</label>
-                <input type="text" id="fristName">
-            
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName">
+        <label for="firstName">First Name</label>
+        <input type="text" id="fristName">
+    
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName">
 
+        <label for="email">mail adress</label>
+        <input type="text" id="email">
 
-                <label for="email">mail adress</label>
-                <input type="text" id="email">
+        <label for="message">Write your message here</label>
+        <textarea id="message"></textarea>
 
-                <label for="message">Write your message here</label>
-                <textarea id="message"></textarea>
-
-                <input type="submit">
-            
-                </form>
-            </div> 
-
-
-
-    </body>
-
+        <input type="submit">
+    
+    </form>
 
     <footer>
-            <ul>
-                    <li><a href="about.html">About us</a></li>
-                    <li><a href="contact.html">Contact us</a></li>
-            </ul> 
+        <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
     </footer>
-    </html> 
+
+    </body>
+</html> 
