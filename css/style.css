@@ -1,44 +1,86 @@
+
+
 *{
     background-color: lightblue;
     box-sizing: border-box;
+    font-size: 12px;
 }
 header{
-    width: 100%;
+    font-size: 150%;
+    box-sizing: content-box;
     float: center;
-
 }
+
 p{
     width: 100%;
-    position: center;
-    text-align: center;
+}
+p:hover{
+    
+    font-size: 110%;
+    background-color: whitesmoke;
+}
+
+h1{
+    box-sizing: content-box;
+    border: 1px solid black;
+    caption-side: top;
+    font-size: 300%;
+    background-color: lightcyan;
 }
 h2{
-    width: 100%;
-    background-color: lightcoral;
+    caption-side: top;
+    border: 1px solid black;
+    font-size: 200%;
+    box-sizing: content-box;
+    background-color: lightcyan;
 }
-
 h3{
-    width: 100%;
+    font-size: 150%;
+    box-sizing: content-box;
     position: right;
     text-align: right;
-    background-color: lightcoral;
+    background-color: lightcyan;
 }
-
 nav {
-    width: 100%;
+    font-size: 20%;
+    box-sizing: content-box;
     float: center;
     text-anchor: middle;
 }
+ul {
+    list-style-type: none;
+    padding: 1%;
+}
+li {
+    display: inline;
+    
+}
+li a{
+    display: inline;
+    padding: 1%;
+    background-color: lightcyan;
+}
+li a:active{
+    background-color: whitesmoke;
+}
 main {
+   
+    float: left;
+    position: center;
+    text-align: left;
+    box-sizing: content-box;
     width: 100%;
+    border: 1px solid black;
     float: center;
 }
 img {
-    width: 100%;
+    width: 20%;
     height: auto;
 }
-
-
+img:hover{
+    animation-timing-function: ease;
+    width: 100%;
+}
 
 
 @media only screen and (max-width: 768px) {
@@ -46,23 +88,4 @@ img {
     [class*="col-"] {
         width: 100%;
     }
-}
-
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-    border: 1px solid red;
 }
