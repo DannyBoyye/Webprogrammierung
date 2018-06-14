@@ -1,10 +1,10 @@
 /*  
-    W    
-
     Der Hauptunterschied zwischen reset und normalize ist im Grunde,
     dass reset am Anfang der CSS-Datei gesetzt wird und somit dient generall HTML-Eigenschaften auf 0 zu setzen.
     Im Gegensatz zu Normalize, wo nicht alle Eigenschaften resettet werden, sondern nur bestimmte.
     Bestimmte Voreinstellungen wie Abstände, Absätze, fette oder kursive Textauszeichnungen gehen nicht verloren.
+    Deshalb ist die kluegere Variante fuer uns die normalizer.css Variante, weil man damit weniger Aufwand hat und
+    sie mehr dem Zeitgeist entspricht.
 */
 
 
