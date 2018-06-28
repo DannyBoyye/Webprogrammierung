@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Our Foodblog</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="validateCheck.js"></script>
+</head>
+
+<body>
+
+
+    <header>
+    
+        <h1>Know what you eat</h1>
+        <h2>A foodblog with cool tools</h2> 
+        
+    </header>
+
+
+    <nav id="menu">
+        <ul>
+            <li><a href="analyser.html">Food analyser</a></li>
+            <li><a href="blog.html">Our foodblog</a></li>
+            <li><a href="about.html">Who are we?</a></li>
+            <li><a href="quiz.html">Quiz of Food</a></li>
+           
+        </ul> 
+    </nav>
+    <div>
+        
+       <p>Please enter the following formular to get to a hidden game. We don´t give the information to another person, dont worry.</p>    
+      <p>The data must be valid to play the game, so please take care that its real.</p> 
+        
+    </div>
+    <div>
+    <img src="img/game1.png" alt="game" id="gameIMG"> 
+    </div>
+    
+     <form id="formular" name="formular" action="game.html">
+            <div align=center>
+                    <label for="name">Ihren Namen</label>
+                    <input type="text" id="name" name="Name"  required/>
+            </div>  
+            <div align=center>
+                    <label for="alter">Ihr Alter:</label>
+                    <input type="text" id="alter" name="Alter" required/>
+            </div>
+             <div align=center>   
+                    <label for="email">Ihre E-Mail-Adresse:</label>
+                    <input type="email" id="email" name="Email" required/>
+            </div>
+            <div align=center>
+                    <label for="nachricht">Ihre Nachricht:</label>
+                    <textarea id="nachricht" name="nachricht" required ></textarea>
+            </div>
+<div align=center>
+  <input type="submit" value="Abschicken" />
+</div>
+</form>
+    
+    
+    <footer>
+        <ul>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="contact.html">Contact us</a></li>
+        </ul>
+    </footer>
+    
+</body>
+
+
+
+
+</html>

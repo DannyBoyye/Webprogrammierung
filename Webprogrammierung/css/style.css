@@ -1,0 +1,211 @@
+/*  
+    Der Hauptunterschied zwischen reset und normalize ist im Grunde,
+    dass reset am Anfang der CSS-Datei gesetzt wird und somit dient generall HTML-Eigenschaften auf 0 zu setzen.
+    Im Gegensatz zu Normalize, wo nicht alle Eigenschaften resettet werden, sondern nur bestimmte.
+    Bestimmte Voreinstellungen wie Abstände, Absätze, fette oder kursive Textauszeichnungen gehen nicht verloren.
+    Deshalb ist die kluegere Variante fuer uns die normalizer.css Variante, weil man damit weniger Aufwand hat und
+    sie mehr dem Zeitgeist entspricht.
+*/
+
+
+
+
+
+/*
+   the main part of the css i've set everything to 
+   be relative so not to much has to be specifically edited
+   when changing screens and devices.
+*/
+*{
+    background-color: lightblue;
+    box-sizing: content-box;
+    font-size: 12px;
+}
+header{
+    font-size: 150%;
+    box-sizing: content-box;
+}
+main {
+    text-align: left;
+    box-sizing: content-box;
+    width: 60%;
+    margin: auto;
+    border: 1px solid black;
+}
+
+/*
+    All the blog elements
+*/
+p{
+    width: 100%;
+}
+p:hover{
+    font-size: 110%;
+    background-color: whitesmoke;
+}
+P::first-letter{
+    color: red;
+    font-weight: bold;
+}
+h1{
+    box-sizing: content-box;
+    border: 1px solid rgb(0, 0, 0);
+    caption-side: top;
+    text-align: center;
+    font-size: 200%;
+    background-color: lightcyan;
+}
+h2{
+    caption-side: top;
+    border: 1px solid black;
+    font-size: 200%;
+    text-align: center;
+    box-sizing: content-box;
+    background-color: lightcyan;
+}
+h3{
+    font-style: italic;
+    font-size: 150%;
+    box-sizing: content-box;
+    text-align: left;
+    background-color: lightcyan;
+}
+
+
+/*
+    the navigation menu
+*/
+nav {
+    font-size: 20%;
+    box-sizing: content-box;
+    text-anchor: middle;
+}
+ul {
+    width: 100%;
+    box-sizing: content-box;
+
+    text-align: center;
+    padding: 1%;
+}
+li {
+    display: inline;
+}
+li a{
+    display: inline;
+    padding: 1%;
+    
+    background-color: lightcyan;
+}
+li a:active{
+    
+    background-color: whitesmoke;
+}
+li a:hover{
+    transition-timing-function: ease;
+    background-color: lightblue;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/*
+    The image and its animation
+*/
+img {
+    width: 100%;
+    height: auto;
+}
+img:hover{
+    width: 100%;
+    animation-timing-function: ease;
+    animation: turner 4s infinite linear;
+}
+@keyframes turner{
+    from { transform:scale(1) }
+    to { transform:scale(0.8,0.8)}
+}
+
+
+/*
+    The different input types styled 
+*/
+input[type="submit"] {
+    background-color: lightcyan;
+    box-sizing: content-box;
+    color: black;
+    padding: 0.7%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 150%;
+  }
+input[type="submit"]:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+input[type="number"] {
+    padding: 1%;
+    border: 2px solid black;
+}
+input[type= "radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+  
+    border: 2px solid black;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+  
+    position: relative;
+    top: 4px;
+}
+input[type= "radio"]:checked {
+    border: 6px solid black;
+} 
+form {
+	margin: 40px 0;
+}
+div {
+	margin: 0 50px;
+}
+label {
+  width: 200px;
+  border-radius: 3px;
+  border: 2px solid black;
+}
+canvas { background: #eee; display: block; margin: 0 auto; }
+
+button{
+    text-align: center;
+    width: 40%;
+margin-left: 30%;
+margin-right: 30%
+}
+/*
+    When the screen gets smaller add some css elements
+*/
+@media screen and (max-device-width: 580px) {
+    h1{
+        font-size: 200%;
+    }
+    h2{
+        font-size: 100%;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    img:active{
+        width: 100%;
+        animation-timing-function: ease;
+        animation: turner 4s infinite linear;
+    }
+    main {
+        text-align: left;
+        box-sizing: content-box;
+        width: 100%;
+        border: 1px solid black;
+    }
+}
