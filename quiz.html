@@ -26,27 +26,28 @@
             <li><a href="blog.html">Our foodblog</a></li>
             <li><a href="about.html">Who are we?</a></li>
             <li><a href="quiz.html">Quiz of Food</a></li>
+           
         </ul> 
     </nav>
 
     
     
-     <form id="formular" name="formular" action="">
+     <form id="formular" name="formular" action="game.html">
             <div>
                     <label for="name">Ihren Namen</label>
-                    <input type="text" id="name" name="Name" />
+                    <input type="text" id="name" name="Name"  required/>
             </div>
             <div>
                     <label for="alter">Ihr Alter:</label>
-                    <input type="text" id="alterr" name="Alter" />
+                    <input type="text" id="alter" name="Alter" required/>
                 </div>
                 <div>
                     <label for="email">Ihre E-Mail-Adresse:</label>
-                     <input type="text" id="email" name="Email" />
+                     <input type="email" id="email" name="Email" required />
                 </div>
                 <div>
                      <label for="nachricht">Ihre Nachricht:</label>
-                     <textarea id="nachricht" name="nachricht" ></textarea>
+                     <textarea id="nachricht" name="nachricht" required  ></textarea>
                 </div>
 <div>
   <input type="submit" value="Abschicken" />
