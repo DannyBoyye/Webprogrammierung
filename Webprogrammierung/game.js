@@ -1,15 +1,18 @@
 
-//code by daan lockhorst and Danny Schilke
-//idea and example by CodingChallenge on youtube and W3C 
+//code and cool ideas by daan lockhorst and Danny Schilke
+//idea and example by CodingChallenge on youtube and W3C  
+
+
+
+
 
 
 // global variables
 var myGamePiece;
 var myObstacles = [];
 var myScore;
+var up = false;
 var colorArr = ["black", "white", "green", "yellow", "red"];
-
-
 
 // initaite game 
 function startGame() {
@@ -26,7 +29,6 @@ var myGameArea = {
         this.canvas.width = 480;
         this.canvas.height = 270;
         this.context = this.canvas.getContext("2d");
-        
         this.frameNo = 0;
         this.interval = setInterval(updateGameArea, 20);
         },
@@ -36,11 +38,11 @@ var myGameArea = {
 }
 
 // the main component class 
-function component(width, height, color, x, y, type) {
+function component(w, h, color, x, y, type) {
     this.type = type;
     this.score = 0;
-    this.width = width;
-    this.height = height;
+    this.w = w;
+    this.h = h;
     this.speedX = 0;
     this.speedY = 0;    
     this.x = x;
@@ -50,12 +52,12 @@ function component(width, height, color, x, y, type) {
     this.update = function() {
         ctx = myGameArea.context;
         if (this.type == "text") {
-            ctx.font = this.width + " " + this.height;
+            ctx.font = this.w + " " + this.h;
             ctx.fillStyle = color;
             ctx.fillText(this.text, this.x, this.y);
         } else {
             ctx.fillStyle = color;
-            ctx.fillRect(this.x, this.y, this.width, this.height);
+            ctx.fillRect(this.x, this.y, this.w, this.h);
         }
     }
     this.newPos = function() {
@@ -65,7 +67,7 @@ function component(width, height, color, x, y, type) {
         this.hitBottom();
     }
     this.hitBottom = function() {
-        var rockbottom = myGameArea.canvas.height - this.height;
+        var rockbottom = myGameArea.canvas.height - this.h;
         if (this.y > rockbottom) {
             this.y = rockbottom;
             this.gravitySpeed = 0;
@@ -73,13 +75,13 @@ function component(width, height, color, x, y, type) {
     }
     this.crashWith = function(otherobj) {
         var myleft = this.x;
-        var myright = this.x + (this.width);
+        var myright = this.x + (this.w);
         var mytop = this.y;
-        var mybottom = this.y + (this.height);
+        var mybottom = this.y + (this.h);
         var otherleft = otherobj.x;
-        var otherright = otherobj.x + (otherobj.width);
+        var otherright = otherobj.x + (otherobj.w);
         var othertop = otherobj.y;
-        var otherbottom = otherobj.y + (otherobj.height);
+        var otherbottom = otherobj.y + (otherobj.h);
         var crash = true;
         if ((mybottom < othertop) || (mytop > otherbottom) || (myright < otherleft) || (myleft > otherright)) {
             crash = false;
@@ -87,7 +89,7 @@ function component(width, height, color, x, y, type) {
         return crash;
     }
 }
-
+// runs the main game 
 function updateGameArea() {
     var x, height, gap, minHeight, maxHeight, minGap, maxGap;
     for (i = 0; i < myObstacles.length; i += 1) {
@@ -123,11 +125,38 @@ function updateGameArea() {
     myGamePiece.update();
 }
 
+//set the refresh rate
 function everyinterval(n) {
     if ((myGameArea.frameNo / n) % 2 == 0) {return true;}
     return false;
 }
 
+//set the vertical movement of the player blob thingie 
 function accelerate(n) {
     myGamePiece.gravity = n;
+}
+
+
+//starts the game and handles the button;
+Window.onload = startGame();
+
+
+// Get the button, and when the user clicks on it, execute myFunction
+document.getElementById("but1").onclick = function() {
+    accelerate(-0.15);
+};
+document.getElementById("but2").onclick = function(){
+    accelerate(0.15);
+};
+
+// checks for the key down and up so you can play with up and down keys
+document.onkeydown = checkKey();
+function checkKey(e) {
+    e = e || window.event;
+    if (e.keyCode == '38') {
+        accelerate(-0.15);
+    }
+    else if (e.keyCode == '40') {
+        accelerate(0.5);
+    }
 }
